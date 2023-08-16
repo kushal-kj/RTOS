@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="EXPORT_DIALOG">
+		<item key="Start" value="0x20005020"/>
+		<item key="End" value="0x2000508e"/>
+		<item key="Initial address" value="0x20005020"/>
+		<item key="File" value="C:\Users\ravindra\Desktop\GitHub Repo_embedded\RTOS\freeRTOS\freeRTOS_Projects\RECORDS\001.SVdat"/>
+		<item key="SELECTED_EXPORTER" value="rawbinary"/>
+	</section>
+</section>

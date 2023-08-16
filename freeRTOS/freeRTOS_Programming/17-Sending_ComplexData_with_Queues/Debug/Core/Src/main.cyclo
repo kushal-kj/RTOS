@@ -1,0 +1,10 @@
+../Core/Src/main.c:46:5:main	1
+../Core/Src/main.c:88:6:SenderTask	2
+../Core/Src/main.c:110:6:ReceiverTask	3
+../Core/Src/main.c:140:5:uart2_write	2
+../Core/Src/main.c:148:5:__io_putchar	1
+../Core/Src/main.c:162:6:SystemClock_Config	3
+../Core/Src/main.c:209:13:MX_USART2_UART_Init	2
+../Core/Src/main.c:242:13:MX_GPIO_Init	1
+../Core/Src/main.c:269:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:286:6:Error_Handler	1

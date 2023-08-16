@@ -1,0 +1,10 @@
+23:43:29 **** Incremental Build of configuration Debug for project 2-Tasks_SEGGER_SystemView ****
+make -j8 all 
+arm-none-eabi-size   2-Tasks_SEGGER_SystemView.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28632	    116	  26652	  55400	   d868	2-Tasks_SEGGER_SystemView.elf
+Finished building: default.size.stdout
+ 
+
+23:43:29 Build Finished. 0 errors, 0 warnings. (took 573ms)
+

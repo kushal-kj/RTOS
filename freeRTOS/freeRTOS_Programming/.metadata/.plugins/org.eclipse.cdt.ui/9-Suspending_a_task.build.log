@@ -1,0 +1,10 @@
+20:39:38 **** Incremental Build of configuration Debug for project 9-Suspending_a_task ****
+make -j8 all 
+arm-none-eabi-size   9-Suspending_a_task.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20392	    104	  20976	  41472	   a200	9-Suspending_a_task.elf
+Finished building: default.size.stdout
+ 
+
+20:39:38 Build Finished. 0 errors, 0 warnings. (took 528ms)
+

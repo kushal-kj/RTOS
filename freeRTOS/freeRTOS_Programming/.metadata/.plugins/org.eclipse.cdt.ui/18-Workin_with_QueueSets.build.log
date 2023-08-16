@@ -1,0 +1,10 @@
+20:27:41 **** Build of configuration Debug for project 18-Workin_with_QueueSets ****
+make -j8 all 
+arm-none-eabi-size   18-Workin_with_QueueSets.elf 
+   text	   data	    bss	    dec	    hex	filename
+  24952	    116	  20980	  46048	   b3e0	18-Workin_with_QueueSets.elf
+Finished building: default.size.stdout
+ 
+
+20:27:42 Build Finished. 0 errors, 0 warnings. (took 1s.134ms)
+

@@ -1,0 +1,10 @@
+21:05:47 **** Incremental Build of configuration Debug for project 6-Changing_TaskPriority_at_RunTime ****
+make -j8 all 
+arm-none-eabi-size   6-Changing_TaskPriority_at_RunTime.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20408	    104	  20968	  41480	   a208	6-Changing_TaskPriority_at_RunTime.elf
+Finished building: default.size.stdout
+ 
+
+21:05:48 Build Finished. 0 errors, 0 warnings. (took 824ms)
+

@@ -1,0 +1,10 @@
+00:49:53 **** Incremental Build of configuration Debug for project 14-Idle_Task ****
+make -j8 all 
+arm-none-eabi-size   14-Idle_Task.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20216	    104	  20976	  41296	   a150	14-Idle_Task.elf
+Finished building: default.size.stdout
+ 
+
+00:49:53 Build Finished. 0 errors, 0 warnings. (took 654ms)
+
