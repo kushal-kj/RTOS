@@ -1,21 +1,14 @@
-23:10:33 **** Incremental Build of configuration Debug for project 19-Binary_Semaphores ****
+00:49:09 **** Incremental Build of configuration Debug for project 20-Drivers ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F401xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "19-Binary_Semaphores.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\freeRTOS_Programming\19-Binary_Semaphores\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="19-Binary_Semaphores.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: 19-Binary_Semaphores.elf
- 
-arm-none-eabi-size   19-Binary_Semaphores.elf 
-arm-none-eabi-objdump -h -S  19-Binary_Semaphores.elf  > "19-Binary_Semaphores.list"
+arm-none-eabi-size   20-Drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-  25576	    116	  20980	  46672	   b650	19-Binary_Semaphores.elf
+  10288	    100	   3196	  13584	   3510	20-Drivers.elf
 Finished building: default.size.stdout
  
-Finished building: 19-Binary_Semaphores.list
- 
-23:10:40 **** Incremental Build of configuration Debug for project 19-Binary_Semaphores ****
+00:49:20 **** Incremental Build of configuration Debug for project 20-Drivers ****
 make -j8 all 
-arm-none-eabi-size   19-Binary_Semaphores.elf 
+arm-none-eabi-size   20-Drivers.elf 
    text	   data	    bss	    dec	    hex	filename
-  25576	    116	  20980	  46672	   b650	19-Binary_Semaphores.elf
+  10288	    100	   3196	  13584	   3510	20-Drivers.elf
 Finished building: default.size.stdout
  

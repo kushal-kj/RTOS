@@ -20,6 +20,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:18-Workin_with_QueueSets\ Debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:18-Workin_with_QueueSets\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:19-Binary_Semaphores\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:2-Multiple_Tasks\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:20-Drivers/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3-CreatingTasks_from_OtherTasks/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4-Task_Parameters\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5-Task_Priority\ Debug/activeLaunchMode=debug
