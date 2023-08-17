@@ -1,4 +1,4 @@
-13:01:05 **** Incremental Build of configuration Debug for project 2-Multiple_Tasks ****
+16:04:31 **** Incremental Build of configuration Debug for project 2-Multiple_Tasks ****
 make -j8 all 
 arm-none-eabi-size   2-Multiple_Tasks.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   2-Multiple_Tasks.elf
 Finished building: default.size.stdout
  
 
-13:01:06 Build Finished. 0 errors, 0 warnings. (took 630ms)
+16:04:32 Build Finished. 0 errors, 0 warnings. (took 859ms)
 

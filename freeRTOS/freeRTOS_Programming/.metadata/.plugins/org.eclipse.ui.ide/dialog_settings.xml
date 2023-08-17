@@ -7,6 +7,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\freeRTOS_Programming"/>
 			<item value="C:\Users\ravindra\Desktop\GitHub Repo_embedded\RTOS\freeRTOS\freeRTOS_Programming"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">

@@ -64,8 +64,8 @@ all: main-build
 main-build: 2-Multiple_Tasks.elf secondary-outputs
 
 # Tool invocations
-2-Multiple_Tasks.elf 2-Multiple_Tasks.map: $(OBJS) $(USER_OBJS) C:\Users\ravindra\Desktop\GitHub\ Repo_embedded\RTOS\freeRTOS\freeRTOS_Projects\2-Multiple_Tasks\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "2-Multiple_Tasks.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ravindra\Desktop\GitHub Repo_embedded\RTOS\freeRTOS\freeRTOS_Projects\2-Multiple_Tasks\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2-Multiple_Tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+2-Multiple_Tasks.elf 2-Multiple_Tasks.map: $(OBJS) $(USER_OBJS) C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\freeRTOS_Programming\2-Multiple_Tasks\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "2-Multiple_Tasks.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\freeRTOS_Programming\2-Multiple_Tasks\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="2-Multiple_Tasks.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
