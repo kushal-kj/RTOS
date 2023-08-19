@@ -1,0 +1,2 @@
+../Core/Src/adc_driver.c:4:6:adc_init	4	static
+../Core/Src/adc_driver.c:19:10:read_analog_sensor	4	static
