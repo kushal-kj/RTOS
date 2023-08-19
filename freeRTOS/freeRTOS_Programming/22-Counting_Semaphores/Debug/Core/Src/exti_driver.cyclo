@@ -1,0 +1,5 @@
+../Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	2
+../Core/Src/exti_driver.c:4:6:p13_interrupt_init	1
+../Core/Src/exti_driver.c:30:6:gpio_init	1
+../Core/Src/exti_driver.c:36:9:read_digital_sensor	2
