@@ -1,8 +1,3 @@
-/*
- *Driver files are written for further projects.
- *
- *You can checkout the files ending with "filename_driver" in both 'src' and 'inc' folders
-*/
 
 #include "main.h"
 #include "cmsis_os.h"
@@ -18,8 +13,17 @@ static void MX_GPIO_Init(void);
 
 int __io_putchar(int ch);
 
-uint8_t button_state;
-uint32_t sensor_value;
+void polledUartReceive(void *pvParameters);
+void Handlertask(void *pvParameters);
+
+
+
+#define STACK_SIZE 128		//128*4 = 512 bytes
+
+static QueueHandle_t uart2_BytesReceived = NULL;
+
+
+
 
 int main(void)
 {
@@ -27,22 +31,63 @@ int main(void)
   HAL_Init();		/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
   SystemClock_Config();		/* Configure the system clock */
   MX_GPIO_Init();		    /* Initialize all configured peripherals */
-  USART2_UART_TX_Init();
 
-  gpio_init();
-  adc_init();
+
+  xTaskCreate(polledUartReceive,			//create task1
+		  "polledUartRx",
+		  STACK_SIZE,
+		  NULL,
+		  tskIDLE_PRIORITY+2,
+		  NULL);
+
+  xTaskCreate(Handlertask,					//create task2
+		  "UartPrintTask",
+		  STACK_SIZE,
+		  NULL,
+		  tskIDLE_PRIORITY+3,
+		  NULL);
+
+  uart2_BytesReceived=xQueueCreate(10,sizeof(char));
+
+  vTaskStartScheduler();
 
 
 
   while (1)
   {
-	  button_state=read_digital_sensor();
 
-	  sensor_value=read_analog_sensor();
 
   }
 
 }
+
+void polledUartReceive(void *pvParameters)
+{
+	uint8_t nextByte;
+	USART2_UART_TX_Init();						//Initialize the UART
+
+	while(1)
+	{
+		nextByte=USART2_read();
+		xQueueSend(uart2_BytesReceived,&nextByte,0);
+
+	}
+}
+
+char rcvByte;
+
+void Handlertask(void *pvParameters)
+{
+	while(1)
+	{
+		xQueueReceive(uart2_BytesReceived, &rcvByte, portMAX_DELAY);
+
+
+	}
+}
+
+
+
 
 
 /**

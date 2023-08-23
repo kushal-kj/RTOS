@@ -11,6 +11,7 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:10-Resuming_a_Task\ Debug/activ
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:11-Killing_a_Task\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:12-Blocking_a_Task\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:13-Executing_Tasks_Periodically\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:13-Executing_Tasks_Periodically\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:14-Idle_Task\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:15-Working_With_Queues\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:16-Syncing_Queues\ Debug/activeLaunchMode=debug
@@ -27,6 +28,10 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:22-Counting_Semaphores\ Debug/a
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:23-Gatekeeper_Task\ Debug/activeLaunchMode=run
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:24-Working_with_SoftwareTimers\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:25-Stopping_the_Timer\ Debug/activeLaunchMode=run
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:26-Interacting_with_Drivers-UARTRx\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:27-Interacting_with_Drivers-UARTRx_Interrupt\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:28-UART_Rxinterrupt_DataPackets\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:28-UART_Rxinterrupt_DataPackets\ Debug/activeLaunchTarget=null\:---
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:3-CreatingTasks_from_OtherTasks/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4-Task_Parameters\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5-Task_Priority\ Debug/activeLaunchMode=debug

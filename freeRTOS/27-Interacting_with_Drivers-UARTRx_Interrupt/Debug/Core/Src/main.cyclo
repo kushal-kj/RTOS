@@ -1,0 +1,10 @@
+../Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+../Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	2
+../Core/Src/main.c:29:5:main	1
+../Core/Src/main.c:59:6:start_rx_interrupt	1
+../Core/Src/main.c:71:6:Handlertask	1
+../Core/Src/main.c:84:6:USART2_IRQHandler	4
+../Core/Src/main.c:110:6:SystemClock_Config	3
+../Core/Src/main.c:158:13:MX_GPIO_Init	1
+../Core/Src/main.c:190:6:HAL_TIM_PeriodElapsedCallback	2
+../Core/Src/main.c:207:6:Error_Handler	1

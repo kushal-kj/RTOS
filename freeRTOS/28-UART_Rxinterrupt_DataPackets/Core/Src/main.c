@@ -1,0 +1,261 @@
+
+#include "main.h"
+#include "cmsis_os.h"
+#include <stdio.h>
+
+#include "uart_driver.h"
+#include "exti_driver.h"
+#include "adc_driver.h"
+
+/* Private function prototypes -----------------------------------------------*/
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+
+
+int __io_putchar(int ch);
+
+
+int32_t start_rx_interrupt(uint8_t *Buffer,uint_fast16_t Len);
+void Handlertask(void *pvParameters);
+
+
+#define STACK_SIZE 128		//128*4 = 512 bytes
+#define EXPECTED_PKT_LEN 5
+
+static int rxInProgress=0;		//to check if rx is in progress or not
+static uint16_t rxLen=0;		//length of the data receiving
+static uint8_t *rxBuff=NULL;	//a pointer to store the received data
+static uint16_t rxItr=0;		//to apply a loop
+
+static SemaphoreHandle_t rxDone=NULL;		//Semaphore handle
+
+int main(void)
+{
+
+  HAL_Init();		/* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  SystemClock_Config();		/* Configure the system clock */
+  MX_GPIO_Init();		    /* Initialize all configured peripherals */
+
+
+  rxDone=xSemaphoreCreateBinary();			//Create Semaphore
+
+  xTaskCreate(Handlertask,					//create task1
+		  "UartPrintTask",
+		  STACK_SIZE,
+		  NULL,
+		  tskIDLE_PRIORITY+3,
+		  NULL);
+
+
+  vTaskStartScheduler();
+
+
+
+  while (1)
+  {
+
+  }
+
+}
+
+
+int32_t start_rx_interrupt(uint8_t *Buffer,uint_fast16_t Len)		//Sets up an interrupt rx for USART2
+
+{
+	if(!rxInProgress && (Buffer!=NULL))
+	{
+		rxInProgress=1;
+		rxLen=Len;
+		rxBuff=Buffer;
+		rxItr=0;
+
+		USART2->CR1 |=0x0020;				//Enable the Rx interrupt
+		NVIC_SetPriority(USART2_IRQn,6);
+		NVIC_EnableIRQ(USART2_IRQn);
+
+		return 0;
+	}
+	return -1;
+
+}
+
+
+uint8_t rxData[EXPECTED_PKT_LEN];		//Main buffer to receive the data
+char rxCode[50]={0};					//To check the status of the buffer whether the data is received or not
+
+void Handlertask(void *pvParameters)
+{
+	USART2_UART_RX_Init();
+
+	for(int i=0;i<EXPECTED_PKT_LEN;i++)
+	{
+		rxData[i]=0;
+	}
+
+	const TickType_t timeout=pdMS_TO_TICKS(8000);
+
+	while(1)
+	{
+		start_rx_interrupt(rxData,EXPECTED_PKT_LEN);
+
+		if(xSemaphoreTake(rxDone,timeout)==pdPASS)			//To check if the semaphore can be taken within that "timeout"
+		{
+			if(EXPECTED_PKT_LEN==rxItr)						//To check if the the length is same
+			{
+				sprintf(rxCode,"Data Received");
+			}
+			else
+			{
+				sprintf(rxCode,"Length mismatch");
+			}
+		}
+
+		else
+		{
+			sprintf(rxCode,"Timeout");
+		}
+
+	}
+}
+
+
+void USART2_IRQHandler(void)						//After ISR, continue where you left of and don't run from the  Higher Priority Task
+{
+	portBASE_TYPE xHigherPriorityTaskWoken=pdFALSE;
+
+	if(USART2->SR & 0x0020)
+	{
+		uint8_t tempVal=(uint8_t)USART2->DR;		//We receive the data and store it in tempVal
+
+		if(rxInProgress)
+		{
+			rxBuff[rxItr++]=tempVal;				//We keep storing the data in buffer and increment the iterator
+			if(rxItr==rxLen)						//We check if the length of the iterator becomes equal to the length of the data
+			{
+				rxInProgress=0;
+				//Using xSemaphoreGive from ISR
+				xSemaphoreGiveFromISR(rxDone,&xHigherPriorityTaskWoken);		//We send signal that we got the entire data packet
+			}
+		}
+
+	}
+	portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+
+}
+
+
+
+
+
+/**
+  * @brief System Clock Configuration
+  * @retval None
+  */
+void SystemClock_Config(void)
+{
+  RCC_OscInitTypeDef RCC_OscInitStruct = {0};
+  RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+
+  /** Configure the main internal regulator output voltage
+  */
+  __HAL_RCC_PWR_CLK_ENABLE();
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
+
+  /** Initializes the RCC Oscillators according to the specified parameters
+  * in the RCC_OscInitTypeDef structure.
+  */
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 16;
+  RCC_OscInitStruct.PLL.PLLN = 336;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV4;
+  RCC_OscInitStruct.PLL.PLLQ = 7;
+  if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+  /** Initializes the CPU, AHB and APB buses clocks
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
+
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+}
+
+
+/**
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_GPIO_Init(void)
+{
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
+
+  /* GPIO Ports Clock Enable */
+  __HAL_RCC_GPIOA_CLK_ENABLE();
+
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
+}
+
+/* USER CODE BEGIN 4 */
+
+/* USER CODE END 4 */
+
+
+/**
+  * @brief  Function implementing the defaultTask thread.
+  * @param  argument: Not used
+  * @retval None
+  */
+
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM1 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  /* USER CODE BEGIN Callback 0 */
+
+  /* USER CODE END Callback 0 */
+  if (htim->Instance == TIM1) {
+    HAL_IncTick();
+  }
+  /* USER CODE BEGIN Callback 1 */
+
+  /* USER CODE END Callback 1 */
+}
+
+/**
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
+void Error_Handler(void)
+{
+  /* USER CODE BEGIN Error_Handler_Debug */
+  /* User can add his own implementation to report the HAL error return state */
+  __disable_irq();
+  while (1)
+  {
+  }
+  /* USER CODE END Error_Handler_Debug */
+}

@@ -1,0 +1,5 @@
+../Core/Src/uart_driver.c:9:6:USART2_UART_TX_Init	8	static
+../Core/Src/uart_driver.c:26:6:USART2_UART_RX_Init	8	static
+../Core/Src/uart_driver.c:44:5:USART2_write	16	static
+../Core/Src/uart_driver.c:52:6:USART2_read	4	static
+../Core/Src/uart_driver.c:60:5:__io_putchar	16	static
