@@ -8712,3 +8712,117 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-23 11:26:35.116
 !MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-23 17:17:29.669
+!MESSAGE Indexed '29-EventGroups' (22 sources, 82 headers) in 4.27 sec: 4,716 declarations; 22,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2023-08-23 17:18:52.857
+!MESSAGE Error in CDT UI during reconcile
+!STACK 1
+C Model Exception: C Model Status [Element main.c does not exist.]
+	at org.eclipse.cdt.internal.core.model.CElement.newNotPresentException(CElement.java:485)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.makeConsistent(TranslationUnit.java:583)
+	at org.eclipse.cdt.internal.core.model.ReconcileWorkingCopyOperation.executeOperation(ReconcileWorkingCopyOperation.java:65)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:346)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:613)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:641)
+	at org.eclipse.cdt.internal.core.model.WorkingCopy.reconcile(WorkingCopy.java:365)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:79)
+	at org.eclipse.cdt.internal.ui.text.CReconcilingStrategy.reconcile(CReconcilingStrategy.java:64)
+	at org.eclipse.cdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:89)
+	at org.eclipse.cdt.internal.ui.text.CCompositeReconcilingStrategy.reconcile(CCompositeReconcilingStrategy.java:90)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:78)
+	at org.eclipse.cdt.internal.ui.text.CReconciler.process(CReconciler.java:346)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+!SUBENTRY 1 org.eclipse.cdt.core 4 969 2023-08-23 17:18:52.902
+!MESSAGE Element main.c does not exist.
+
+!ENTRY org.eclipse.cdt.ui 2 0 2023-08-23 18:09:28.108
+!MESSAGE The 'org.eclipse.cdt.ui.DOMCompletionProposalComputer' proposal computer from the 'org.eclipse.cdt.ui' plug-in did not complete normally. The extension took too long to return from the 'computeCompletionProposals()' operation.
+!SESSION 2023-08-24 11:26:01.913 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-24 11:26:32.697
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-24 11:26:32.700
+!MESSAGE Log4j2 initialized with config file C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-24 11:26:50.022
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2023-08-24 11:27:13.759
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 11:28:04.407
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 11:28:20.789
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 11:28:25.031
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-08-24 22:17:32.475 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-24 22:18:32.666
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-24 22:18:32.668
+!MESSAGE Log4j2 initialized with config file C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-24 22:18:58.472
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2023-08-24 22:19:22.558
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 22:20:40.997
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 22:20:54.460
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-24 22:20:57.518
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+!SESSION 2023-08-25 11:10:04.106 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_IN
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-08-25 11:10:41.515
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-08-25 11:10:41.550
+!MESSAGE Log4j2 initialized with config file C:\Users\ravindra\Desktop\GitHub_Repo_Embedded_Programming\RTOS\freeRTOS\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-08-25 11:10:59.812
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.wakatime.eclipse.plugin 1 0 2023-08-25 11:11:45.979
+!MESSAGE wakatime-cli is up to date.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-25 11:12:45.785
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/wakatime/eclipse-wakatime/master/update-site/content.jar
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-25 11:12:57.792
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/updates/release/latest, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2023-08-25 11:13:00.941
+!MESSAGE Using unsafe http transport to retrieve http://download.eclipse.org/usssdk/drops/release/1.2.2/content.xml.xz, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-25 12:58:12.589
+!MESSAGE Indexed '30-EventGroups_with_Mutiple_Setters' (22 sources, 82 headers) in 4.49 sec: 4,716 declarations; 22,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-08-25 20:43:24.160
+!MESSAGE Indexed '31-Syncing_Tasks_with_EventGroups' (22 sources, 82 headers) in 2.54 sec: 4,716 declarations; 22,526 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0073%)

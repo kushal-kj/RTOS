@@ -1,0 +1,10 @@
+11:45:03 **** Incremental Build of configuration Debug for project 31-Syncing_Tasks_with_EventGroups ****
+make -j8 all 
+arm-none-eabi-size   31-Syncing_Tasks_with_EventGroups.elf 
+   text	   data	    bss	    dec	    hex	filename
+  25108	    120	  20968	  46196	   b474	31-Syncing_Tasks_with_EventGroups.elf
+Finished building: default.size.stdout
+ 
+
+11:45:04 Build Finished. 0 errors, 0 warnings. (took 1s.627ms)
+
