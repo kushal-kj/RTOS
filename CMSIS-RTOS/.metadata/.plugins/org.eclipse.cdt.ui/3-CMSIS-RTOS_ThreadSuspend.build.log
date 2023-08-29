@@ -1,0 +1,10 @@
+23:55:42 **** Incremental Build of configuration Debug for project 3-CMSIS-RTOS_ThreadSuspend ****
+make -j8 all 
+arm-none-eabi-size   3-CMSIS-RTOS_ThreadSuspend.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21152	    104	  20984	  42240	   a500	3-CMSIS-RTOS_ThreadSuspend.elf
+Finished building: default.size.stdout
+ 
+
+23:55:43 Build Finished. 0 errors, 0 warnings. (took 661ms)
+

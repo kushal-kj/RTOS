@@ -40,6 +40,9 @@ org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:31-Syncing_Tasks_with_EventGrou
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:32-TaskNotifications\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:33-Scheduler_Preemption_Only\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:34-Scheduler-PseudoTimeSlicing\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:34-Scheduler-PseudoTimeSlicing\ Debug/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:35-Scheduler_Cooperation\ Debug/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:36-CMSIS-RTOS_Thread\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:4-Task_Parameters\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:5-Task_Priority\ Debug/activeLaunchMode=debug
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:7-Changing_Own_Priority\ Debug/activeLaunchMode=debug
