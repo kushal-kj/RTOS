@@ -1,0 +1,10 @@
+17:13:46 **** Incremental Build of configuration Debug for project 9-CMSIS-RTOS_osSemaphores ****
+make -j8 all 
+arm-none-eabi-size   9-CMSIS-RTOS_osSemaphores.elf 
+   text	   data	    bss	    dec	    hex	filename
+  27164	    116	  21020	  48300	   bcac	9-CMSIS-RTOS_osSemaphores.elf
+Finished building: default.size.stdout
+ 
+
+17:13:46 Build Finished. 0 errors, 0 warnings. (took 596ms)
+

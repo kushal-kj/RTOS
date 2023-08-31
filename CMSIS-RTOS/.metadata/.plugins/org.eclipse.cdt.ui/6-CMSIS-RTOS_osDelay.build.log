@@ -1,0 +1,10 @@
+20:30:04 **** Incremental Build of configuration Debug for project 6-CMSIS-RTOS_osDelay ****
+make -j8 all 
+arm-none-eabi-size   6-CMSIS-RTOS_osDelay.elf 
+   text	   data	    bss	    dec	    hex	filename
+  20992	    104	  20984	  42080	   a460	6-CMSIS-RTOS_osDelay.elf
+Finished building: default.size.stdout
+ 
+
+20:30:05 Build Finished. 0 errors, 0 warnings. (took 804ms)
+
