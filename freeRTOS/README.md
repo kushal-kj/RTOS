@@ -12,7 +12,7 @@
 |  2.  |  ***Multiple_Tasks***  |  This project is about crearting multiple tasks.  |
 |  3.  |  ***CreatingTasks_from_OtherTasks***  |  This project creates tasks from another task.  |
 |  4.  |   ***Task_Parameters***  |  In this project, task parameters are used while task creation.  |
-|  5.  |  ***Task_Priority***  |  This project is about assigning task prioriies.  |
+|  5.  |  ***Task_Priority***  |  This project is about assigning task priorities.  |
 |  6.  |  ***Changing_TaskPriority_at_Runtime***  |   This is about changing the task priorities at runtime.  |
 |  7.  |  ***Changing_Own_Priority***  |  This project is about changing the task's own priority at runtime.  |
 |  8.  |  ***Getting_TaskPriority***  |  This project is about getting the Task priority of other task.  |
