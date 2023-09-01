@@ -1,10 +1,10 @@
-# DESCRIPTION
+# DESCRIPTION  :
 
 -  This folder consists of ***CMSIS-RTOS Programming***
 -  I have used **STM32F401RE** Nucleo Board (Nucleo-64 series).
 -  IDE used : STM32CUBEIDE
 
-# CONTENTS
+# CONTENTS  :
 
 | # |  PROJECT NAME | DESCRIPTION |
 | :--- | :------------: | ----------- |
