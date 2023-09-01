@@ -1,11 +1,12 @@
-# Description
+# DESCRIPTION  :
 
 - This Repo consist of ***FreeRTOS programming using ARM processor***.
 - I have used **STM32F401RE Nucleo Board** (Nucleo-64 series).
 - IDE used : STM32CUBEIDE
   
 
-# Contents
+# CONTENTS  :
+
 | # |  PROJECT NAME | DESCRIPTION |
 | :--- | :------------: | ----------- |
 |  1.  |  ***Task_Creation***  |  This project is about crearting tasks using FreeRTOS. |
