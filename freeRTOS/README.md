@@ -39,7 +39,7 @@
 |  29.  |  ***EventGroups***  |  This project is about creating EventGroups.  |
 |  30.  |  ***EventGroups_with_Mutiple_Setters***  |  This project is about setting event groups.  |
 |  31.  |  ***Syncing_Tasks_with_EventGroups***  |  This project is about syncing both tasks and EventGroups.  |
-|  32.  |  ***TaskNotifications***  |  Thsi project is about Task Notifications,  |
+|  32.  |  ***TaskNotifications***  |  This project is about Task Notifications.  |
 |  33.  |  ***Scheduler_Preemption_Only***  |  This project is about Pre-emptive Scheduling.  |
 |  34.  |  ***Scheduler-PseudoTimeSlicing***  |  This project is about Pseudo-Time slicing by the scheduler/  |
 |  35.  |  ***Scheduler_Cooperation***  |  This project is about Co-operative Scheduling.  |
