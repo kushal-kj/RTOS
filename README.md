@@ -1,6 +1,6 @@
 # Description
 
-- This repository consists of RTOS programming.
+- This repository consists Embedded programming using RTOS.
 - I have used STM32F401RE Nucleo Board.
 
 # Contents
