@@ -4,7 +4,7 @@
 -  I have used **STM32F401RE** Nucleo Board (Nucleo-64 series).
 -  IDE used : STM32CUBEIDE
 
-#CONTENTS
+# CONTENTS
 
 | # |  PROJECT NAME | DESCRIPTION |
 | :--- | :------------: | ----------- |
@@ -18,4 +18,4 @@
 |  8.  |  ***CMSIS-RTOS_osMutex***  |  This project is about sending a data to the serial monitor using Mutex.  |
 |  9.  |  ***CMSIS-RTOS_osSemaphores***  |  This project is about sending a data to the serial monitor using Semaphores.  |
 |  10.  |  ***CMSIS-RTOS_MessageQueues***  |  This project is about MessageQueues.  |
-|  10.  |  ***CMSIS-RTOS_EventFlags***  |  This project is about Event Flags.  |
+|  11.  |  ***CMSIS-RTOS_EventFlags***  |  This project is about Event Flags.  |
